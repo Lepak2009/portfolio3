@@ -1,0 +1,268 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #1f1f1f, #2b2b2b);
+    color: white;
+     background: #121826;
+}
+
+/*--------------
+    HEADER
+--------------*/
+
+a {
+  color: #94A3B8;
+  font-weight: 500;
+  transition: 0.3s ease;
+  text-decoration: none;
+  
+  
+}
+
+a:hover {
+  opacity: 0.6;
+  
+}
+
+.container {
+  max-width: 1250px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 15px;
+}
+
+.logo {
+  font-weight: 800;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.title {
+  margin-top: 0;
+  font-size: 36px;
+  text-align: center;
+  color: #DEDEDE;
+  
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 48px;
+
+  font-size: 18px;
+  background: #22d3ee71;
+  color: #ECECEC;
+   
+  border-radius: 4px;
+  transition: 0.3s ease;
+
+  padding: 14px 28px;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: 0.3s ease;
+
+
+
+}
+.btn:hover{
+   transform: translateY(-3px);
+
+}
+
+.btn:hover {
+  transform: scale(1.1);
+ 
+  opacity: 0.7;
+  background: #0ba8c4;      
+
+}
+
+.btn::before {
+  content: "";
+  width: 21px;
+  height: 21px;
+
+  background-image: url("images/mail.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.socials {
+  display: flex;
+  gap: 40px;
+}
+
+.socials__img {
+  display: flex;
+}
+
+
+
+.burger-menu {
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+.header {
+  padding: 13px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 50px;
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 20px 0; 
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #94A3B8;
+}
+
+/* Бургер */
+.burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+ 
+}
+
+
+
+
+@media (max-width: 768px) {
+
+  .nav {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: #232d41;
+    width: 200px;
+    display: none;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 12px;
+    
+  }
+
+  .nav a {
+    margin: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.119);
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  .nav.active {
+    display: flex;
+  }
+}
+.section {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.section h1 {
+    font-size: 42px;
+    margin-bottom: 50px;
+    color:  #b4c3d8;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px;
+    text-align: left;
+    transition: 0.6s ease;
+    transform: translateY(50px);
+    opacity: 0;
+}
+
+.card.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+}
+
+.card p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.author {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.role {
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+
+.footer {
+  padding: 40px 0;
+  border-top: 1px solid #696969;
+}
+
+.footer .container {
+  display: flex; 
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.footer__copy {
+  font-size: 16px;
+  margin: 0;
+  color: #94A3B8;
+}
+
+.footer__copy span {
+  color: #94A3B8;;
+}
+@media (max-width: 700px) {
+  .footer .container {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 35px;
+  }
+} 
